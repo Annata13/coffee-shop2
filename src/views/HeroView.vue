@@ -4,24 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <header>
-                            <ul class="header d-flex justify-content-center justify-content-md-start flex-wrap">
-                                <li class="header__item">
-                                    <a href="./index.html">
-                                        <img src="@/assets/logo/Logo.svg" alt="logo">
-                                    </a>
-                                </li>
-                                <li class="header__item">
-                                    <a href="./coffeepage.html">Our coffee</a>
-                                </li>
-                                <li class="header__item">
-                                    <a href="./goodspage.html">For your pleasure</a>
-                                </li>
-                                <li class="header__item">
-                                    <a href="./contacts.html">Contact us</a>
-                                </li>
-                            </ul>
-                        </header>
+                        <nav-bar-component />
                     </div>
                 </div>
                 <div class="row">
@@ -65,9 +48,9 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <card-component />
-                            <card-component />
-                            <card-component />
+                            <product-card />
+                            <product-card />
+                            <product-card />
                         </div>
                     </div>
                 </div>
@@ -77,9 +60,10 @@
 </template>
 
 <script>
-import CardComponent from '@/components/CardComponent.vue';
+import ProductCard from '@/components/ProductCard.vue';
+import NavBarComponent from '@/components/NavBarComponent.vue';
 
 export default {
-    components: { CardComponent }
+    components: { ProductCard, NavBarComponent }
 }
 </script>
