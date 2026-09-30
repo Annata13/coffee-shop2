@@ -13,7 +13,7 @@
                         <img class="beanslogo" src="@/assets/logo/Beans_logo.svg" alt="Beans logo">
                         <div class="preview__subtitle">We makes every day full of energy and taste</div>
                         <div class="preview__subtitle">Want to try our beans?</div>
-                        <a href="./coffeepage.html" class="preview__btn">More</a>
+                        <router-link to="/our-coffee" class="preview__btn">More</router-link>
                     </div>
                 </div>
             </div>
@@ -64,6 +64,30 @@ import ProductCard from '@/components/ProductCard.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 
 export default {
-    components: { ProductCard, NavBarComponent }
+    components: { ProductCard, NavBarComponent },
+    data() {
+        return {
+            cards: [
+                {
+                    id: 0,
+                    text: 'Solimo Coffee Beans 2kg',
+                    price: '10.73$',
+                    img: 'coffee-1.jpg'
+                },
+                {
+                    id: 1,
+                    text: 'Presto Coffee Beans 1kg',
+                    price: '15.99$',
+                    img: 'coffee-2.jpg'
+                },
+                {
+                    id: 2,
+                    text: 'AROMISTICO Coffee 1kg',
+                    price: '6.99$',
+                    img: 'coffee-3.jpg'
+                },
+            ]
+        }
+    }
 }
 </script>

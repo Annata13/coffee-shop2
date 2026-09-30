@@ -74,6 +74,54 @@ import ProductCard from '@/components/ProductCard.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 
 export default {
-    components: { ProductCard, NavBarComponent }
+    components: { ProductCard, NavBarComponent },
+    data() {
+        return {
+            cards: [
+                {
+                    id: 0,
+                    text: 'Solimo Coffee Beans 2kg',
+                    country: 'Brazil',
+                    price: '10.73$',
+                    img: 'coffee-3.jpg'
+                },
+                {
+                    id: 1,
+                    text: 'Presto Coffee Beans 1kg',
+                    country: 'Brazil',
+                    price: '15.99$',
+                    img: 'coffee-3.jpg'
+                },
+                {
+                    id: 2,
+                    text: 'AROMISTICO Coffee 1kg',
+                    country: 'Brazil',
+                    price: '6.99$',
+                    img: 'coffee-3.jpg'
+                },
+                {
+                    id: 3,
+                    text: 'Solimo Coffee Beans 2kg',
+                    country: 'Brazil',
+                    price: '10.73$',
+                    img: 'coffee-3.jpg'
+                },
+                {
+                    id: 4,
+                    text: 'Solimo Coffee Beans 2kg',
+                    country: 'Brazil',
+                    price: '10.73$',
+                    img: 'coffee-3.jpg'
+                },
+                {
+                    id: 5,
+                    text: 'Solimo Coffee Beans 2kg',
+                    country: 'Brazil',
+                    price: '10.73$',
+                    img: 'coffee-3.jpg'
+                },
+            ]
+        }
+    }
 }
 </script>
