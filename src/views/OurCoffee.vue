@@ -7,7 +7,7 @@
                         <nav-bar-component />
                     </div>
                 </div>
-                <h1 class="title-big">Our Coffee</h1>
+                <titel-component name="Our Coffee" />
             </div>
         </div>
         <section class="shop">
@@ -55,12 +55,18 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
-                            <product-card />
-                            <product-card />
-                            <product-card />
-                            <product-card />
-                            <product-card />
-                            <product-card />
+                            <product-card classItem="shop__item" :name="coffee[0].text" :price="coffee[0].price"
+                                :image="coffee[0].img" />
+                            <product-card classItem="shop__item" :name="coffee[1].text" :price="coffee[1].price"
+                                :image="coffee[1].img" />
+                            <product-card classItem="shop__item" :name="coffee[2].text" :price="coffee[2].price"
+                                :image="coffee[2].img" />
+                            <product-card classItem="shop__item" :name="coffee[3].text" :price="coffee[3].price"
+                                :image="coffee[3].img" />
+                            <product-card classItem="shop__item" :name="coffee[4].text" :price="coffee[4].price"
+                                :image="coffee[4].img" />
+                            <product-card classItem="shop__item" :name="coffee[5].text" :price="coffee[5].price"
+                                :image="coffee[5].img" />
                         </div>
                     </div>
                 </div>
@@ -72,52 +78,54 @@
 <script>
 import ProductCard from '@/components/ProductCard.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
+import titelComponent from '@/components/TitelComponent.vue';
+import TitelComponent from '@/components/TitelComponent.vue';
 
 export default {
-    components: { ProductCard, NavBarComponent },
+    components: { ProductCard, NavBarComponent, TitelComponent },
     data() {
         return {
-            cards: [
+            coffee: [
                 {
                     id: 0,
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
-                    price: '10.73$',
+                    price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
                     id: 1,
                     text: 'Presto Coffee Beans 1kg',
                     country: 'Brazil',
-                    price: '15.99$',
+                    price: 15.99,
                     img: 'coffee-3.jpg'
                 },
                 {
                     id: 2,
                     text: 'AROMISTICO Coffee 1kg',
                     country: 'Brazil',
-                    price: '6.99$',
+                    price: 6.99,
                     img: 'coffee-3.jpg'
                 },
                 {
                     id: 3,
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
-                    price: '10.73$',
+                    price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
                     id: 4,
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
-                    price: '10.73$',
+                    price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
                     id: 5,
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
-                    price: '10.73$',
+                    price: 10.73,
                     img: 'coffee-3.jpg'
                 },
             ]
