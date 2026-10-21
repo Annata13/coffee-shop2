@@ -48,19 +48,8 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <product-card 
-                            classItem="best__item"
-                            :name="bestsellers[0].text"
-                            :price="bestsellers[0].price"
-                            :image="bestsellers[0].img"/>
-                             <product-card  classItem="best__item"
-                            :name="bestsellers[1].text"
-                            :price="bestsellers[1].price"
-                            :image="bestsellers[1].img"/>
-                             <product-card  classItem="best__item"
-                            :name="bestsellers[2].text"
-                            :price="bestsellers[2].price"
-                            :image="bestsellers[2].img"/>
+                            <product-card v-for="bestseller in bestsellers" :key="bestseller.id" classItem="best__item"
+                                :name="bestseller.text" :price="bestseller.price" :image="bestseller.img" />
                         </div>
                     </div>
                 </div>
@@ -73,6 +62,7 @@
 import ProductCard from '@/components/ProductCard.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import TitelComponent from '@/components/TitelComponent.vue';
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
     components: { ProductCard, NavBarComponent, TitelComponent },
@@ -80,19 +70,19 @@ export default {
         return {
             bestsellers: [
                 {
-                    id: 0,
+                    id: uuidv4(),
                     text: 'Solimo Coffee Beans 2kg',
                     price: 10.73,
                     img: 'coffee-1.jpg'
                 },
                 {
-                    id: 1,
+                    id: uuidv4(),
                     text: 'Presto Coffee Beans 1kg',
                     price: 15.99,
                     img: 'coffee-2.jpg'
                 },
                 {
-                    id: 2,
+                    id: uuidv4(),
                     text: 'AROMISTICO Coffee 1kg',
                     price: 6.99,
                     img: 'coffee-3.jpg'

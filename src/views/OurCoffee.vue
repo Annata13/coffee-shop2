@@ -55,18 +55,8 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
-                            <product-card classItem="shop__item" :name="coffee[0].text" :price="coffee[0].price"
-                                :image="coffee[0].img" />
-                            <product-card classItem="shop__item" :name="coffee[1].text" :price="coffee[1].price"
-                                :image="coffee[1].img" />
-                            <product-card classItem="shop__item" :name="coffee[2].text" :price="coffee[2].price"
-                                :image="coffee[2].img" />
-                            <product-card classItem="shop__item" :name="coffee[3].text" :price="coffee[3].price"
-                                :image="coffee[3].img" />
-                            <product-card classItem="shop__item" :name="coffee[4].text" :price="coffee[4].price"
-                                :image="coffee[4].img" />
-                            <product-card classItem="shop__item" :name="coffee[5].text" :price="coffee[5].price"
-                                :image="coffee[5].img" />
+                            <product-card v-for="cff in coffee" :key="cff.id" classItem="shop__item" :name="cff.text"
+                                :price="cff.price" :image="cff.img" />
                         </div>
                     </div>
                 </div>
@@ -78,8 +68,8 @@
 <script>
 import ProductCard from '@/components/ProductCard.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
-import titelComponent from '@/components/TitelComponent.vue';
 import TitelComponent from '@/components/TitelComponent.vue';
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
     components: { ProductCard, NavBarComponent, TitelComponent },
@@ -87,42 +77,42 @@ export default {
         return {
             coffee: [
                 {
-                    id: 0,
+                    id: uuidv4(),
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
                     price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
-                    id: 1,
+                    id: uuidv4(),
                     text: 'Presto Coffee Beans 1kg',
                     country: 'Brazil',
                     price: 15.99,
                     img: 'coffee-3.jpg'
                 },
                 {
-                    id: 2,
+                    id: uuidv4(),
                     text: 'AROMISTICO Coffee 1kg',
                     country: 'Brazil',
                     price: 6.99,
                     img: 'coffee-3.jpg'
                 },
                 {
-                    id: 3,
+                    id: uuidv4(),
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
                     price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
-                    id: 4,
+                    id: uuidv4(),
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
                     price: 10.73,
                     img: 'coffee-3.jpg'
                 },
                 {
-                    id: 5,
+                    id: uuidv4(),
                     text: 'Solimo Coffee Beans 2kg',
                     country: 'Brazil',
                     price: 10.73,
